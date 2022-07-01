@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RPS_Emu</string>
+    <string name="load_success">Loading success</string>
+    <string name="load_error">Loading error</string>
+    <string name="lru">lru</string>
+    <string name="opt">opt</string>
+    <string name="fifo">fifo</string>
+    <string name="exit">exit</string>
+    <string name="create_data">Create Data</string>
+    <string name="todo">TO DO</string>
+    <string name="missing_page_rate">Missing rate</string>
+    <string name="reinit">Please init random</string>
+    <string name="loading">Loading...</string>
+</resources>
