@@ -1,5 +1,6 @@
 package com.dyj.requestpagingscheduleemulator.module.main.activity;
 
+import android.graphics.Color;
 import android.os.Handler;
 
 import com.dyj.requestpagingscheduleemulator.base.BaseActivity;

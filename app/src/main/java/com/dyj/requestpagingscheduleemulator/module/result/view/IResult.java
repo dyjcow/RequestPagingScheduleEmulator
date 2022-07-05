@@ -33,5 +33,19 @@ public interface IResult extends BaseView {
      */
     void showMissingPageRate(int lost);
 
+
+    /**
+     * 展示error toast
+     */
     void showReInit();
+
+    /**
+     * 展示data数据
+     */
+    void showRVData();
+
+    /**
+     * 展示pages数据
+     */
+    void showRVPages();
 }

@@ -12,15 +12,15 @@ public interface BaseView {
     /**
      * 展示载入动画
      */
-    void showLoading();
+    void showLoading(boolean isShow);
 
     /**
      * 操作成功隐藏dialog和显示成功
      */
-    void SuccessHideLoading();
+    void SuccessHideLoading(boolean isShow);
 
     /**
      * 操作失败隐藏dialog和显示失败
      */
-    void FailedHideLoading();
+    void FailedHideLoading(boolean isShow);
 }

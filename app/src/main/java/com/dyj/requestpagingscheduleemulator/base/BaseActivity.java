@@ -83,18 +83,18 @@ public abstract class BaseActivity<P extends BasePresenter<? extends BaseView>,V
     }
 
     @Override
-    public void showLoading() {
-        MyUtil.showLoading(this);
+    public void showLoading(boolean isShow) {
+        if (isShow) MyUtil.showLoading(this);
     }
 
     @Override
-    public void SuccessHideLoading() {
-        new Handler().postDelayed(MyUtil::dismissSuccessLoading,500);
+    public void SuccessHideLoading(boolean isShow) {
+        if (isShow) new Handler().postDelayed(MyUtil::dismissSuccessLoading,500);
     }
 
     @Override
-    public void FailedHideLoading() {
-        new Handler().postDelayed(MyUtil::dismissFailedLoading,500);
+    public void FailedHideLoading(boolean isShow) {
+        if (isShow) new Handler().postDelayed(MyUtil::dismissFailedLoading,500);
     }
 
     /**
