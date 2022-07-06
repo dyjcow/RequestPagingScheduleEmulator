@@ -2,7 +2,11 @@
 
 [![author: DYJ (shields.io)](https://img.shields.io/badge/author-DYJ-green)](https://lxtlovely.top/)             [![downloads: 7.8M (shields.io)](https://img.shields.io/badge/downloads-7.8M-brightgreen)](https://github.com/dyjcow/RequestPagingScheduleEmulator/releases/download/V1.0/app-release.apk)             [![gdut: OS-Course-design (shields.io)](https://img.shields.io/badge/gdut-OS--Course--design-blue)](https://github.com/dyjcow/RequestPagingScheduleEmulator)
 
-[TOC]
+* [背景](#背景)
+* [架构](#架构)
+* [页面展示](#页面展示)
+* [下载体验](#下载体验)
+* [使用的开源库💖](#使用的开源库💖)
 
 ## 背景
 
