@@ -1,0 +1,216 @@
+@startuml
+
+interface com.dyj.requestpagingscheduleemulator.base.BaseView {
+~ void showLoading(boolean)
+~ void SuccessHideLoading(boolean)
+~ void FailedHideLoading(boolean)
+}
+interface com.dyj.requestpagingscheduleemulator.module.main.view.IMainView {
+}
+class com.dyj.requestpagingscheduleemulator.util.MyUtil {
+- {static} Application mApplicationContext
+- {static} RxDialogLoading rxDialogLoading
++ {static} void initialize(Application)
++ {static} Application getApplication()
++ {static} void closeSoftKeyboard()
++ {static} String getString(int)
++ {static} void showLoading(Context)
++ {static} void dismissSuccessLoading()
++ {static} void dismissFailedLoading()
++ {static} int AppGetColor(int)
++ {static} int ViewGetColor(Context,int)
++ {static} int getWeatherIcon(Context,String)
++ {static} Bitmap compressBySize(Context,int,float,float)
++ {static} String split(String)
++ {static} int getNowHour()
++ {static} String getNowTime()
+}
+class com.dyj.requestpagingscheduleemulator.module.main.activity.SplashActivity {
+# SplashPresenter createPresenter()
+# void initView()
+# void initData()
+}
+class com.dyj.requestpagingscheduleemulator.module.main.presenter.SplashPresenter {
+}
+class com.dyj.requestpagingscheduleemulator.app.App {
++ void onCreate()
+}
+abstract class com.dyj.requestpagingscheduleemulator.base.BaseActivity {
+- VB binding
+# P presenter
+# {abstract}P createPresenter()
+# {abstract}void initView()
+# {abstract}void initData()
+# void onCreate(Bundle)
+# void onDestroy()
++ void showLoading(boolean)
++ void SuccessHideLoading(boolean)
++ void FailedHideLoading(boolean)
++ Boolean getDarkModeStatus(Context)
++ VB getBinding()
+}
+class com.dyj.requestpagingscheduleemulator.util.ActivityUtil {
+- {static} Stack<Activity> activityStack
+- {static} MyActivityLifecycleCallbacks instance
++ {static} ActivityLifecycleCallbacks getActivityLifecycleCallbacks()
++ {static} void finishActivity(Activity)
++ {static} void startActivity(Class)
++ {static} void startActivity(Class,boolean)
++ {static} void closeAllActivity()
++ {static} Activity getCurrentActivity()
++ {static} void actionStart(Class,int)
++ {static} int getIntentData()
+}
+class com.dyj.requestpagingscheduleemulator.util.ActivityUtil.MyActivityLifecycleCallbacks {
++ void onActivityCreated(Activity,Bundle)
++ void onActivityStarted(Activity)
++ void onActivityResumed(Activity)
++ void onActivityPaused(Activity)
++ void onActivityStopped(Activity)
++ void onActivitySaveInstanceState(Activity,Bundle)
++ void onActivityDestroyed(Activity)
+}
+class com.dyj.requestpagingscheduleemulator.bean.PageData {
+- int waitData
+- int data1
+- int data2
+- int data3
+- int data4
++ int getWaitData()
++ void setWaitData(int)
++ int getData1()
++ void setData1(int)
++ int getData2()
++ void setData2(int)
++ int getData3()
++ void setData3(int)
++ int getData4()
++ void setData4(int)
+}
+interface com.dyj.requestpagingscheduleemulator.module.main.view.ISplashView {
+}
+class com.dyj.requestpagingscheduleemulator.module.result.adapter.DataAdapter {
+# void convert(BaseViewHolder,Integer)
+}
+class com.dyj.requestpagingscheduleemulator.module.main.presenter.MainPresenter {
+}
+class com.dyj.requestpagingscheduleemulator.module.result.adapter.PageAdapter {
+# void convert(BaseViewHolder,PageData)
+}
+class com.dyj.requestpagingscheduleemulator.util.ToastUtil {
+- {static} Toast toast
++ {static} void showToast(String)
+- {static} void createToast(String)
++ {static} void showCenterToast(String)
+- {static} void createCenterToast(String)
++ {static} void cancelToast()
+}
+class com.dyj.requestpagingscheduleemulator.common.GlobalConstant {
++ {static} int LRU
++ {static} int OPT
++ {static} int FIFO
+}
+class com.dyj.requestpagingscheduleemulator.module.result.presenter.ResultPresenter {
+~ List<PageData> list
+~ List<Integer> datas
+~ List<Integer> showData
+~ HashMap<Integer,Integer> map
+~ LinkedHashMap<Integer,Integer> link
+~ int lost
++ void random(boolean)
++ void option(int,boolean)
+- void OPT(int)
+- void FIFO(int)
+- void LRU(int)
+- boolean check(PageData,int)
+- void changeOPT(PageData,int,int)
+- void changFIFO(PageData,int,int)
+- void changLRU(PageData,int,int)
+- void makeRecently(int,int)
+}
+class com.dyj.requestpagingscheduleemulator.module.result.activity.ResultActivity {
+# ResultPresenter createPresenter()
+# void initView()
+# void initData()
++ void showPic(String)
++ void showInstructions(List<Integer>)
++ void showPages(List<PageData>)
++ void showMissingPageRate(int)
++ void showReInit()
++ void showRVData()
++ void showRVPages()
+}
+class com.dyj.requestpagingscheduleemulator.util.LogUtil {
+- {static} String TAG
+- {static} boolean IS_LOG
+- {static} int MAX_LENGTH
+- {static} Application mApplicationContext
++ {static} void setIsLog(boolean)
++ {static} void setIsLog(boolean,String)
++ {static} void i(String)
++ {static} void i(String,String)
++ {static} void d(String)
++ {static} void d(String,String)
++ {static} void e(String)
++ {static} void e(String,String)
+- {static} String[] getAutoJumpLogInfos()
+}
+interface com.dyj.requestpagingscheduleemulator.module.result.view.IResult {
+~ void showPic(String)
+~ void showInstructions(List<Integer>)
+~ void showPages(List<PageData>)
+~ void showMissingPageRate(int)
+~ void showReInit()
+~ void showRVData()
+~ void showRVPages()
+}
+class com.dyj.requestpagingscheduleemulator.base.BasePresenter {
++ V baseView
++ void detachView()
++ V getBaseView()
+}
+class com.dyj.requestpagingscheduleemulator.util.SpUtil {
+- {static} String FILE_NAME
+- {static} SharedPreferences sp
++ {static} void setString(String,String)
++ {static} String getString(String)
++ {static} void setInt(String,int)
++ {static} int getInt(String)
++ {static} void setBoolean(String,boolean)
++ {static} boolean getBoolean(String)
++ {static} void setFloat(String,Float)
++ {static} Float getFloat(String)
++ {static} void setLong(String,Long)
++ {static} Long getLong(String)
++ {static} void setDouble(String,double)
++ {static} double getDouble(String)
++ {static} void removeByKey(String)
++ {static} void removeAll()
+}
+class com.dyj.requestpagingscheduleemulator.module.main.activity.MainActivity {
+# MainPresenter createPresenter()
+# void initView()
+# void initData()
+}
+
+
+com.dyj.requestpagingscheduleemulator.base.BaseView <|-- com.dyj.requestpagingscheduleemulator.module.main.view.IMainView
+com.dyj.requestpagingscheduleemulator.module.main.view.ISplashView <|.. com.dyj.requestpagingscheduleemulator.module.main.activity.SplashActivity
+com.dyj.requestpagingscheduleemulator.base.BaseActivity <|-- com.dyj.requestpagingscheduleemulator.module.main.activity.SplashActivity
+com.dyj.requestpagingscheduleemulator.base.BasePresenter <|-- com.dyj.requestpagingscheduleemulator.module.main.presenter.SplashPresenter
+android.app.Application <|-- com.dyj.requestpagingscheduleemulator.app.App
+com.dyj.requestpagingscheduleemulator.base.BaseView <|.. com.dyj.requestpagingscheduleemulator.base.BaseActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.dyj.requestpagingscheduleemulator.base.BaseActivity
+com.dyj.requestpagingscheduleemulator.util.ActivityUtil +.. com.dyj.requestpagingscheduleemulator.util.ActivityUtil.MyActivityLifecycleCallbacks
+com.dyj.requestpagingscheduleemulator.util.ActivityLifecycleCallbacks <|.. com.dyj.requestpagingscheduleemulator.util.ActivityUtil.MyActivityLifecycleCallbacks
+com.dyj.requestpagingscheduleemulator.base.BaseView <|-- com.dyj.requestpagingscheduleemulator.module.main.view.ISplashView
+com.chad.library.adapter.base.BaseQuickAdapter <|-- com.dyj.requestpagingscheduleemulator.module.result.adapter.DataAdapter
+com.dyj.requestpagingscheduleemulator.base.BasePresenter <|-- com.dyj.requestpagingscheduleemulator.module.main.presenter.MainPresenter
+com.chad.library.adapter.base.BaseQuickAdapter <|-- com.dyj.requestpagingscheduleemulator.module.result.adapter.PageAdapter
+com.dyj.requestpagingscheduleemulator.base.BasePresenter <|-- com.dyj.requestpagingscheduleemulator.module.result.presenter.ResultPresenter
+com.dyj.requestpagingscheduleemulator.module.result.view.IResult <|.. com.dyj.requestpagingscheduleemulator.module.result.activity.ResultActivity
+com.dyj.requestpagingscheduleemulator.base.BaseActivity <|-- com.dyj.requestpagingscheduleemulator.module.result.activity.ResultActivity
+com.dyj.requestpagingscheduleemulator.base.BaseView <|-- com.dyj.requestpagingscheduleemulator.module.result.view.IResult
+com.dyj.requestpagingscheduleemulator.module.main.view.IMainView <|.. com.dyj.requestpagingscheduleemulator.module.main.activity.MainActivity
+com.dyj.requestpagingscheduleemulator.base.BaseActivity <|-- com.dyj.requestpagingscheduleemulator.module.main.activity.MainActivity
+@enduml
