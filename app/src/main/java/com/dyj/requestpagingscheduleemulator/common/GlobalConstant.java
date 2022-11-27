@@ -9,9 +9,5 @@ package com.dyj.requestpagingscheduleemulator.common;
  */
 public class GlobalConstant {
 
-    public static final int LRU = 1;
-
-    public static final int OPT = 2;
-
-    public static final int FIFO = 3;
+    public static final String IS_NOT_FIRST_USE = "is_not_first_use";
 }

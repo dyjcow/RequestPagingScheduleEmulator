@@ -14,7 +14,13 @@
     <color name="black1">#261C2C</color>
     <color name="Navy">#3E2C41</color>
     <color name="Dick">#5C527F</color>
-    <color name="back">#191919</color>
-    <color name="overlay">#169BD5</color>
+    <color name="back">#2d0c13</color>
+    <color name="overlay">#49AEDA</color>
+    <color name="blue_green">#63bbd0</color>
     <color name="card">#EEEEEE</color>
+
+    <color name="google_red">#EA4335</color>
+    <color name="google_yellow">#FBBC05</color>
+    <color name="google_blue">#4285F4</color>
+    <color name="google_green">#34A853</color>
 </resources>

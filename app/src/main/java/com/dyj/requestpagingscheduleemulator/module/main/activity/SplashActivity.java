@@ -5,10 +5,19 @@ import android.graphics.Color;
 import android.os.Handler;
 
 import com.dyj.requestpagingscheduleemulator.base.BaseActivity;
+import com.dyj.requestpagingscheduleemulator.bean.DishName;
+import com.dyj.requestpagingscheduleemulator.common.GlobalConstant;
 import com.dyj.requestpagingscheduleemulator.databinding.ActivitySplashBinding;
+import com.dyj.requestpagingscheduleemulator.module.eatwhat.activity.EatActivity;
 import com.dyj.requestpagingscheduleemulator.module.main.presenter.SplashPresenter;
 import com.dyj.requestpagingscheduleemulator.module.main.view.ISplashView;
 import com.dyj.requestpagingscheduleemulator.util.ActivityUtil;
+import com.dyj.requestpagingscheduleemulator.util.SpUtil;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SplashActivity extends BaseActivity<SplashPresenter, ActivitySplashBinding> implements ISplashView {
 
@@ -28,7 +37,7 @@ public class SplashActivity extends BaseActivity<SplashPresenter, ActivitySplash
     @Override
     protected void initView() {
         getWindow().setStatusBarColor(Color.TRANSPARENT);
-        new Handler().postDelayed(() -> ActivityUtil.startActivity(MainActivity.class,true),1000);
+        new Handler().postDelayed(() -> ActivityUtil.startActivity(EatActivity.class,true),1000);
     }
 
     /**
@@ -36,6 +45,17 @@ public class SplashActivity extends BaseActivity<SplashPresenter, ActivitySplash
      */
     @Override
     protected void initData() {
-
+        boolean isNotFirstUse = SpUtil.getBoolean(GlobalConstant.IS_NOT_FIRST_USE);
+        if (!isNotFirstUse){
+            SpUtil.setBoolean(GlobalConstant.IS_NOT_FIRST_USE,true);
+            String[] nameArray = {"鸭腿","手撕鸡","F+咖喱鸡","红烧排骨","大众餐","猪杂汤","渔粉","早茶"};
+            List<String> nameList;
+            nameList = Stream.of(nameArray).collect(Collectors.toList());
+            for (String name : nameList){
+                DishName dishName = new DishName();
+                dishName.setName(name);
+                dishName.save();
+            }
+        }
     }
 }

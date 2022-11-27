@@ -9,6 +9,8 @@ import com.dyj.requestpagingscheduleemulator.util.LogUtil;
 import com.dyj.requestpagingscheduleemulator.util.MyUtil;
 import com.tamsiree.rxkit.RxTool;
 
+import org.litepal.LitePal;
+
 /**
  * @author ：Dyj
  * @date ：Created in 2022/7/1 16:26
@@ -39,6 +41,8 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //载入数据库映射工具
+        LitePal.initialize(this);
         //初始化
         MyUtil.initialize(this);
         //设置UI工具

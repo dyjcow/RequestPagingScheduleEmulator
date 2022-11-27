@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RequestPagingScheduleEmulator">
         <activity
-            android:name=".module.result.activity.ResultActivity"
+            android:name=".module.eatwhat.activity.EatManageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".module.eatwhat.activity.EatActivity"
             android:exported="false" />
         <activity
             android:name=".module.main.activity.SplashActivity"
@@ -25,9 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".module.main.activity.MainActivity"
-            android:exported="false"></activity>
     </application>
 
 </manifest>
