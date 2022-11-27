@@ -114,4 +114,8 @@ public class EatPresenter extends BasePresenter<IEatView> {
         nameMap.put(2,dishNameList.get(2).getName());
         nameMap.put(3,dishNameList.get(3).getName());
     }
+
+    public void refreshData(){
+        dishNameList = LitePal.findAll(DishName.class);
+    }
 }

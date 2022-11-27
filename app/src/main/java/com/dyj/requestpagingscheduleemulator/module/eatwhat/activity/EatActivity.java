@@ -75,6 +75,12 @@ public class EatActivity extends BaseActivity<EatPresenter, ActivityEatBinding> 
         presenter.setInitView();
     }
 
+    @Override
+    protected void onRestart() {
+        presenter.refreshData();
+        super.onRestart();
+    }
+
     /**
      * 设置展示对应的驱动结果
      *
