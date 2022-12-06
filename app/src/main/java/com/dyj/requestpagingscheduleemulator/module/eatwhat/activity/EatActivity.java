@@ -18,7 +18,7 @@ public class EatActivity extends BaseActivity<EatPresenter, ActivityEatBinding> 
 
     private RxRotateBar rotateBar;
     private RxRotateBarBasic rotateBarBasicTmp;
-    private Handler handler;
+//    private Handler handler;
 
     /**
      * 初始化presenter，也是与Activity的绑定
@@ -40,9 +40,9 @@ public class EatActivity extends BaseActivity<EatPresenter, ActivityEatBinding> 
             @Override
             public void onRotateStart() {
                 LogUtil.d("Start");
-                if (handler != null){
-                    handler.removeCallbacksAndMessages(null);
-                }
+//                if (handler != null){
+//                    handler.removeCallbacksAndMessages(null);
+//                }
             }
 
             @Override
@@ -106,16 +106,23 @@ public class EatActivity extends BaseActivity<EatPresenter, ActivityEatBinding> 
         }
         rotateBar.setCenterText("");
         rotateBar.show();
-        int delayMillis = 3000+rotateBarBasicTmp.getRate()*350;
 
-        handler = new Handler();
-        handler.postDelayed(() -> {
-            if (!isFirst) {
-                rotateBar.setCenterText(rotateBarBasicTmp.getTitle());
-                LogUtil.d("执行handler"+delayMillis);
-            }else {
-                rotateBar.setCenterText("好饿");
-            }
-        },delayMillis);
+        if (!isFirst) {
+            rotateBar.setCenterText(rotateBarBasicTmp.getTitle());
+        }else {
+            rotateBar.setCenterText("好饿");
+        }
+
+//        int delayMillis = 3000+rotateBarBasicTmp.getRate()*350;
+//
+//        handler = new Handler();
+//        handler.postDelayed(() -> {
+//            if (!isFirst) {
+//                rotateBar.setCenterText(rotateBarBasicTmp.getTitle());
+//                LogUtil.d("执行handler"+delayMillis);
+//            }else {
+//                rotateBar.setCenterText("好饿");
+//            }
+//        },delayMillis);
     }
 }

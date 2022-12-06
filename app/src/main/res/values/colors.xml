@@ -18,6 +18,12 @@
     <color name="overlay">#49AEDA</color>
     <color name="blue_green">#63bbd0</color>
     <color name="card">#EEEEEE</color>
+    <color name="deep_blue">#1E88E5</color>
+    <color name="green">#95D56A</color>
+    <color name="background">#fff3f3f3</color>
+    <color name="blue_right">#2FACE9</color>
+    <color name="translate_darker_gray">#002FACE9</color>
+
 
     <color name="google_red">#EA4335</color>
     <color name="google_yellow">#FBBC05</color>

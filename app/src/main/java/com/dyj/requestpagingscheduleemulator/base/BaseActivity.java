@@ -14,6 +14,7 @@ import androidx.viewbinding.ViewBinding;
 
 import com.dyj.requestpagingscheduleemulator.util.MyUtil;
 import com.dylanc.viewbinding.base.ViewBindingUtil;
+import com.gyf.immersionbar.ImmersionBar;
 
 /**
  * @author ：Dyj
@@ -62,6 +63,14 @@ public abstract class BaseActivity<P extends BasePresenter<? extends BaseView>,V
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //这个库对软键盘覆盖editText问题进行了适配，UltimateBarX暂未适配，适配用法如下
+        ImmersionBar
+                .with(this)
+                .statusBarDarkFont(true)
+                .fitsSystemWindows(true)
+                .keyboardEnable(true)
+                .init();
+
         //强制使用竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         binding = ViewBindingUtil.inflateWithGeneric(this, getLayoutInflater());

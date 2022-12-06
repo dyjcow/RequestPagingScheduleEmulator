@@ -10,4 +10,8 @@ package com.dyj.requestpagingscheduleemulator.common;
 public class GlobalConstant {
 
     public static final String IS_NOT_FIRST_USE = "is_not_first_use";
+
+    public static final String WRITE = "write";
+
+    public static final String CONFIRM = "confirm";
 }

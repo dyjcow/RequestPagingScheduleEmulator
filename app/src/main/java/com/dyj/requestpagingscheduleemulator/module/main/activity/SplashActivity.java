@@ -1,8 +1,6 @@
 package com.dyj.requestpagingscheduleemulator.module.main.activity;
 
 
-import android.graphics.Color;
-import android.os.Handler;
 
 import com.dyj.requestpagingscheduleemulator.base.BaseActivity;
 import com.dyj.requestpagingscheduleemulator.bean.DishName;
@@ -14,7 +12,6 @@ import com.dyj.requestpagingscheduleemulator.module.main.view.ISplashView;
 import com.dyj.requestpagingscheduleemulator.util.ActivityUtil;
 import com.dyj.requestpagingscheduleemulator.util.SpUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -36,8 +33,7 @@ public class SplashActivity extends BaseActivity<SplashPresenter, ActivitySplash
      */
     @Override
     protected void initView() {
-        getWindow().setStatusBarColor(Color.TRANSPARENT);
-        new Handler().postDelayed(() -> ActivityUtil.startActivity(EatActivity.class,true),1000);
+        ActivityUtil.startActivity(EatActivity.class,true);
     }
 
     /**

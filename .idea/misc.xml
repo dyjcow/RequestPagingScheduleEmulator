@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidData/.gradle/caches/transforms-3/09a1bce59d2d37694199e4efaad0dff6/transformed/jetified-RxUI-2.6.3/res/layout/dialog_sure_false.xml" value="0.35" />
+        <entry key="..\:/AndroidData/.gradle/caches/transforms-3/6469adcd1c848e95a409000546d99bec/transformed/jetified-RxUI-2.6.3/res/drawable/shadow.xml" value="0.3505" />
+        <entry key="..\:/AndroidData/.gradle/caches/transforms-3/6469adcd1c848e95a409000546d99bec/transformed/jetified-RxUI-2.6.3/res/drawable/shape_round_gray_bored.xml" value="0.3505" />
+        <entry key="..\:/AndroidData/.gradle/caches/transforms-3/6469adcd1c848e95a409000546d99bec/transformed/jetified-RxUI-2.6.3/res/layout/dialog_edittext_sure_false.xml" value="0.35" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable-v24/ic_delete.xml" value="0.3505" />
+        <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable-v24/shape_dialog_sure_cancel.xml" value="0.3505" />
+        <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable-v24/shape_edit_txt_slide.xml" value="0.3505" />
+        <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable-v24/shape_edit_txt_white.xml" value="0.3505" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable-v24/shape_rect_r8_white.xml" value="0.3505" />
+        <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable-v24/shape_round_blue.xml" value="0.3505" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.21302083333333333" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable/ic_logo.xml" value="0.3646153846153846" />
+        <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable/ic_write.xml" value="0.3505" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable/main_roll_bg.xml" value="0.3703125" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable/shape_rect_r8_tcc_white.xml" value="0.3646153846153846" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/drawable/splash_bg.xml" value="0.3646153846153846" />
@@ -15,6 +24,7 @@
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/layout/activity_main.xml" value="0.3541666666666667" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/layout/activity_result.xml" value="0.3333333333333333" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/layout/activity_splash.xml" value="0.3541666666666667" />
+        <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/layout/dialog_sure_cancel.xml" value="0.35" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/layout/item_data.xml" value="0.3541666666666667" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/layout/item_dish.xml" value="0.35" />
         <entry key="..\:/Work/RequestPagingScheduleEmulator/app/src/main/res/layout/item_page.xml" value="0.3541666666666667" />

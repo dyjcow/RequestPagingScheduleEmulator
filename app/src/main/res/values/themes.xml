@@ -3,7 +3,7 @@
     <style name="Theme.RequestPagingScheduleEmulator" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue</item>
-        <item name="colorPrimaryVariant">@color/bluePV</item>
+        <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -37,5 +37,10 @@
         <item name="android:paddingTop">12dp</item>
         <item name="android:paddingBottom">12dp</item>
         <item name="android:background">@drawable/shape_rect_r8_tcc_white</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.RequestPagingScheduleEmulator">
+        <item name="colorControlNormal">@color/translate_darker_gray</item>
+        <item name="colorControlActivated">@color/teal_700</item>
     </style>
 </resources>
